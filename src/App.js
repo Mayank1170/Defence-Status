@@ -144,9 +144,9 @@ function App() {
 
   return (
     <div className="w-full h-[100vh] flex flex-row bg-zinc-900 items-center justify-center">
-      <div className="flex items-center relative bg-zinc-900 ">
-        <div className="flex items-center justify-center border-[4px] border-red-500 rounded-full w-[300px] h-[300px]">
-          <div className="flex items-center justify-center border-[5px] border-red-500 shadow-red-600 shadow-[inset_-0px_-0px_20px_4px] rounded-full w-[250px] h-[250px]">
+      {/* <div className="flex items-center relative bg-zinc-900 "> */}
+        <div className="flex items-center relative justify-center border-[4px] border-red-500 rounded-full w-[150px] h-[150px] md:w-[250px] md:h-[250px]">
+          <div className="flex items-center justify-center border-[5px] border-red-500 shadow-red-600 shadow-[inset_-0px_-0px_7px_4px] md:shadow-red-500 md:shadow-[inset_-0px_-0px_15px_4px] rounded-full w-[130px] h-[130px] md:w-[200px] md:h-[200px]">
             {speedValues.map((speed, i) => (
               <div
                 key={i}
@@ -161,7 +161,7 @@ function App() {
                 }}
               >
                 <p
-                  className={`text-red-500 text-3xl font-semibold absolute ${
+                  className={`text-red-500 text-xl md:text-3xl font-semibold absolute ${
                     speed === currentSpeed ? "border-t-2 border-blue-500" : ""
                   }`}
                 >
@@ -169,23 +169,24 @@ function App() {
                 </p>
               </div>
             ))}
-            <div className="flex justify-center items-center border-[5px] border-black shadow-red-500 shadow-[0_0px_10px_10px] rounded-full w-[150px] h-[150px]">
-              <p className="flex items-center justify-center text-7xl text-white bg-black w-full h-full rounded-full">
+            <div className="flex justify-center items-center border-[5px] border-black shadow-red-500 shadow-[0_0px_5px_7px]  md:shadow-red-500  md:shadow-[0_0px_8px_10px] rounded-full w-[70px] h-[70px] md:w-[120px] md:h-[120px]">
+              <p className="flex items-center justify-center text-3xl md:text-7xl text-white bg-black w-full h-full rounded-full">
                 62
               </p>
             </div>
           </div>
+          <div className="flex flex-col items-center justify-center absolute top-[110px] md:top-[190px] bg-zinc-900 w-[250px] h-[80px]">
+          <p className="text-white text-sm md:text-xl ">TOTAL SECURITY </p>
+          <p className="text-white  text-sm md:text-xl ">SCORE</p>
         </div>
-        <div className="flex flex-col items-center justify-center absolute top-[240px] left-[30px] bg-zinc-900 w-[250px] h-[80px]">
-          <p className="text-white">TOTAL SECURITY </p>
-          <p className="text-white">SCORE</p>
         </div>
-      </div>
+       
+      {/* </div> */}
       <div className="flex flex-col">
         <div
           className="relative w-[180px] h-[100px] box-content
           before:content-[''] before:absolute before:top-10 before:right-10
-          before:h-[60px] before:w-[60px] before:border-[20px] 
+          before:h-[60px] before:w-[60px] before:border-[20px]  
           before:border-red-500 before:border-solid before:border-t-[0px]
           before:border-r-[0px] before:rounded-b-0 before:rounded-bl-[50px] 
           before:-rotate-[270deg] before:box-content"
